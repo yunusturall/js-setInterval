@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="div1"></div>
+    
+    <script>
+        var sonuc;
+        function degis(){
+            var x = ["blue","green","red","yellow"];
+            var random = Math.round(Math.random()*3);
+            sonuc = x[random];
+        }
+
+        function isim(){
+            //document.write("JS ÖĞRENME");
+            degis();
+            document.getElementById("div1").innerHTML += "JS ÖĞRENME<br>";
+            document.getElementById("div1").style.backgroundColor = sonuc;
+        }
+        var a = setInterval(isim,2000);
+        //clearInterval(a) kod iptal hale geldi diyebilirz kodlar çalışmaz.
+
+        //setTimeout kullanılabilir aynı zamanda onun görevi ise 2 sny bekler ve sadece bir kez çalışır daha da çalışmaz.
+    
+
+    </script> 
+
+</body>
+</html>
